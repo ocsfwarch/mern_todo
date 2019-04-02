@@ -49,6 +49,10 @@
   background: #666;
 }
 
+.btn_checkbox{
+  cursor:pointer;
+}
+
 
 .nav-item-ocsa{
   margin: 0 0.3125em 0.3125em 0;

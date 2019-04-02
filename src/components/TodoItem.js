@@ -5,23 +5,25 @@ class TodoItem extends Component{
 
     getStyle = () => {
         return{
-            bacgroundColor: '#f4f4f4',
+            textAlign:'left',
+            backgroundColor: '#f4f4f4',
             padding: '10px',
-            borderBoddom: '1px #ccc dotted',
+            borderBottom: '1px #ccc dotted',
             textDecoration: this.props.todo.completed ? 'line-through' : 'none' 
         }
     }
 
     render(){
-        const { id, title} = this.props.todo;
+        // Descructure todo prop
+        const { _id, userId, description} = this.props.todo;
 
         return (
             <div style={this.getStyle()}>
                 <p>
-                    <input type="checkbox" onChange={this.props.toggleComplete.bind(this, id)} />
+                    <input type="checkbox" className="btn_checkbox" onChange={this.props.toggleComplete.bind(this, _id)} />
                     {' '}
-                    {title}
-                    <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>X</button>
+                    {description}
+                    <button onClick={this.props.delTodo.bind(this, _id)} style={btnStyle}>X</button>
                 </p>
             </div>
         )

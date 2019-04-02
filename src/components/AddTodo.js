@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 class AddTodo extends Component {
 
     state = {
-        title: ''
+        userId:'tpartcal@cox.net',
+        description: ''
     }
 
     onChange = (event) => {
@@ -17,9 +18,9 @@ class AddTodo extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        this.props.addTodo(this.state.title);
+        this.props.addTodo(this.state.userId,this.state.description);
         this.setState({
-            title:''
+            description:''
         });
     }
 
@@ -28,10 +29,10 @@ class AddTodo extends Component {
         <div>
             <form onSubmit={this.onSubmit} style={{display:'flex'}}>
                 <input type="text"
-                    name="title"
+                    name="description"
                     style={{flex:'10', padding: '5px'}}
                     placeholder="Add Todo ..."
-                    value={this.state.title}
+                    value={this.state.description}
                     onChange={this.onChange}
                 />
                 <input 
