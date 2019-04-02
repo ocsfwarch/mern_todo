@@ -31,3 +31,38 @@
     transform: rotate(360deg);
   }
 }
+
+.Container{
+  padding: 0 1rem;
+}
+
+.btn{
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: #666;
+}
+
+
+.nav-item-ocsa{
+  margin: 0 0.3125em 0.3125em 0;
+}
+
+.btn-ocsa{
+  width:9.25em;
+}
+
+.link-ocsa{
+  color:white;
+}
+
+.link-ocsa:hover{
+  color:white;
+  text-decoration:none;
+}
